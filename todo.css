@@ -1,21 +1,26 @@
 body{
    background: rgb(226, 223, 223) ;
    margin: 0 auto ;
-   padding: 15%   ;
-   text-align: center ;
+   padding: 15%  ;
+   
 }
 #outbox{
 background:white ;
 width:50%  ;
-padding:  7px  3px ;
+padding:  10px  10px  1px 10px;
 border-radius: 5px ;
+}
+#outbox::after{
+   content: "";
+   clear: both;
+   display: table;
 }
 #inbox {
    background: rgb(226, 223, 223);
-   width:95% ;
-   margin: 0 auto ;
+   width:100% ;
    border-radius: 7px ;
 }
+
 input[type="text"] {
    width:82%;
    background:rgb(226, 223, 223);
@@ -27,4 +32,50 @@ font-size: 24px;
 }
 ul{
    list-style-type:none;
+   text-align: left;
+   padding: 3px;
 }
+svg {
+   margin-top: 9px;
+   padding-right: 5px;
+  
+}
+#ss{
+   margin-left: 5px;
+   float: left;
+   margin-top: 1px;
+ 
+}
+#s0{
+float: left;
+margin:  1px   2px;
+}
+#sx{
+float: right;
+margin:  1px   2px;
+
+}
+#pup{
+   margin: 0 7px;
+   
+}
+a{
+   padding-top: 5px;
+   text-decoration: none;
+   color: rgb(202, 199, 199);
+}
+a:hover{
+   color: black;
+}
+#pdown{
+padding-left: 10px;
+}
+#a1{
+   float: left;
+}
+#a2,#a3,#a4{
+   float: right;
+   padding:0px 9px ;
+ 
+}
+
