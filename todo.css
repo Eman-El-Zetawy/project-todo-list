@@ -20,16 +20,22 @@ border-radius: 5px ;
    width:100% ;
    border-radius: 7px ;
 }
+​#inbox::after{
+       content: "";
+       clear: both;
+       display: table;
+    }
+input{
+       width:82%;
+       background:rgb(226, 223, 223);
+       border: none;
+       outline: none;
+       padding: 5px ;
+       text-align: left;
+       font-size: 24px;
 
-input[type="text"] {
-   width:82%;
-   background:rgb(226, 223, 223);
-   border: none;
-outline: none;
-padding: 5px ;
-text-align: left;
-font-size: 24px;
-}
+   }
+ 
 ul{
    list-style-type:none;
    text-align: left;
@@ -39,7 +45,13 @@ svg {
    margin-top: 9px;
    padding-right: 5px;
   
-}
+} 
+ #span{
+       text-align: left; 
+       font-size: 24px; 
+       color: #000;
+   }
+
 #ss{
    margin-left: 5px;
    float: left;
@@ -52,30 +64,40 @@ margin:  1px   2px;
 }
 #sx{
 float: right;
-margin:  1px   2px;
-
-}
+margin:1px 2px; }
 #pup{
-   margin: 0 7px;
-   
+   margin: 0px  7px; 
 }
-a{
+span{
    padding-top: 5px;
    text-decoration: none;
    color: rgb(202, 199, 199);
+  
 }
-a:hover{
+span:hover{
    color: black;
 }
 #pdown{
 padding-left: 10px;
+
 }
 #a1{
    float: left;
+   padding:0px 9px ;
 }
 #a2,#a3,#a4{
    float: right;
    padding:0px 9px ;
  
 }
-
+#au1{
+   float: left;
+   padding-top: 5px;
+}
+#au2{
+   float: right;
+   padding-top: 5px;
+}
+ /* content: "";
+clear: both;
+display: table; */
