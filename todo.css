@@ -5,29 +5,35 @@ body{
    
 }
 
-#outbox{
+.outbox{
 background:white ;
 width:50%  ;
-padding:  10px  10px  1px 10px;
+padding:1%;
 border-radius: 5px ;
 }
-#outbox::after{
+.outbox::after{
    content: "";
    clear: both;
    display: table;
 }
 
-#inbox {
+.inbox {
    background: rgb(226, 223, 223);
    width:100% ;
    border-radius: 7px ;
 }
+/* #op{
+   position: absolute;
+    margin-top: 8px;
+    margin-left: -20px;
 
-​#inbox::after{
+} */
+​.inbox::after{
        content: "";
        clear: both;
        display: table;
     }
+
 input{
        width:82%;
        background:rgb(226, 223, 223);
@@ -47,66 +53,73 @@ svg {
    padding-right: 5px;
   
 } 
+img{
+   margin-top: 9px;
+   padding-right: 5px;
+}
+span{
+   padding-top: 5px;
+   text-decoration: none;
+   color: rgb(202, 199, 199);}
+
  #span{
        text-align: left; 
        font-size: 24px; 
        color:black;
    }
-​
-#ss{
-   margin-left: 5px;
-   float: left;
-   margin-top: 1px; }
-#s0{
-float: left;
-margin:  0px  2px 3px 2px ; }
-#sx{
-float: right;
-margin:1px 2px; }
-#pup{
-   margin: 0px  7px;  }
-span{
-   padding-top: 5px;
-   text-decoration: none;
-   color: rgb(202, 199, 199);}
 hr {
    border: 1px solid rgb(226, 223, 223); }
 span:hover{
    color: black; }
-#pdown{
-padding-left: 10px;  }
-#a1{
-   float: left;
-   padding:0px 9px ; }
-#a2{
-   float: right;
-   padding:0px 9px ; }
-#a3{
-   float: right;
-   padding:0px 9px ; }
-#a4{
-   float: right;
-   padding:0px 9px ;  }
-#au1{
-   float: left;
-   padding-top: 5px;  }
-#au2{
-   float: right;
-   padding-top: 5px; }
-#pup::after{
+  
+.text-up{
+   margin: 0px  7px;  }
+
+.text-up::after{
    content: "";
    clear: both;
    display: table;}
-#ulli::after{
+
+.text-down{
+padding-left: 10px;  }
+
+ .Complete-all{
+   float: left;
+   padding-top: 5px;  }
+
+   .Clear-Completed{
+   float: right;
+   padding-top: 5px; }​
+
+   .tasks-left{
+   float: left;
+   padding:0px 9px ; }
+
+   .Completed,.Uncomplete,.All{
+   float: right;
+   padding:0px 9px ; }
+
+   .icon-right{
+   margin-left: 5px;
+   float: left;
+   margin-top: 1px; }
+   
+.ul-li::after{
    content: "";
    clear: both;
    display: table;
 }
-/* #pup  , #ulli, #pdown{
-cursor: pointer;
- content: "";
-clear: both;
-display: table;
-background: rgb(226, 223, 223);
-visibility:hidden;
-} */
+.icon-empty{
+float: left;
+margin:  0px  2px 3px 2px ; }
+
+.icon-x{
+float: right;
+margin:1px 2px; }
+
+.icon-add{
+   position: absolute;
+   top:112px;
+   right: 23;
+   
+}

@@ -1,73 +1,76 @@
- // page javascript 
-      ////////////////////////// var name of id 
-      var input = document.getElementById("input");
-      var iconx = document.getElementById("iconX");
-      //var ulli = document.getElementById("ulli");
-      var init = document.getElementById("init0");
-    //   var aul = document.getElementById("au1"); 
-      var au2 = document.getElementById("au2");
-      var a2 = document.getElementById("a2");
-      var a3 = document.getElementById("a3");
-      var a4 = document.getElementById("a4");  
-      var arr=[];
-      var obj={};
-     
-        //////////////////////////// add event listener  & functin 
-      input.addEventListener("click" , function  () {
-        input.value=""; 
-      });
-      input.addEventListener("input" , function  () {
-        iconx.innerHTML='<img src="o+.png" alt="kk"/>' ;
-        });
-      ///////////////////// enterلازم اغيرها ل
-        var i=0;
-        iconx.addEventListener("click" ,function  (){
-                if(input.value!==""){
-          arr.push(input.value);
-          obj={
-              id : i++ ,
-              array :[arr],
-              bool:false 
-          } ;
-          init.innerHTML=arr.length ;
-
-        var createSpan =document.createElement('SPAN');   createSpan.setAttribute("id", "span");    
-        var li = document.createElement('LI');          li.setAttribute("id", "test");
-        // var test =document.getElementById("test");
-        var img =document.createElement('IMG');    img.setAttribute("id", "s0"); img.setAttribute("src", "oo.png");
-    //    var so =document.getElementById("s0");
-        var img1 =document.createElement('IMG');  img1.setAttribute("id", "sx");  img1.setAttribute("src","xx.png");
-        // var sx = document.getElementById("sx");
-        li.appendChild(img);
-             var w1=document.createTextNode(input.value);
-              createSpan.appendChild(w1);
-            li.appendChild(createSpan);
-
-             li.appendChild(img1); 
-            ulli.appendChild(li);
-            console.log(input.value);
-            console.log(arr.length);
-            console.log(obj);
-            console.log(arr);
-        //  var span = document.getElementById("span");
-           
-                  
-    }  })
-///////////////////////////////////////////THE END 
+/////////////////////page javascript
+var input = document.getElementById("input");
+var inbox = document.getElementById("inbox");
+var icon_add = document.getElementById("icon-add");
+var icon_empty = document.getElementById("icon-empty");
+var ul_li = document.getElementById("ul-li");
+var counter = document.getElementById("counter");
+///////////// variable of data
+var i=1;
+var arr=[];
+var obj={}; 
+////////////////functions
+function change_input(){
+this.style="background:rgb(223, 207, 207)";
+inbox.style="background:rgb(223, 207, 207)";
+document.getElementById("icon-add").innerHTML='<img src="icon add.png" alt="icon add.png"  id="icon-add" class="icon-add"/>' ;
+};
+function creat_li (obj , arr){
+var createSpan =document.createElement('SPAN');   createSpan.setAttribute("id", "span"); 
+createSpan.setAttribute("class", "span");
+var li = document.createElement('LI');     li.setAttribute("id", "test");
+var img =document.createElement('IMG');    img.setAttribute("src", "icon empty.png");   
+img.setAttribute("class", "icon-empty");  img.setAttribute("id", "icon-empty"); 
+var img1 =document.createElement('IMG');    img1.setAttribute("id", "icon-x");
+img1.setAttribute("src","icon x.png"); img1.setAttribute("class", "icon-x");img.setAttribute("alt" ,"icon-x");
+li.appendChild(img);
+var input_value=document.createTextNode(input.value);
+createSpan.appendChild(input_value);
+li.appendChild(createSpan);
+li.appendChild(img1); 
+var ul_li=document.getElementById("ul-li");
+ul_li.appendChild(li);
+// console.log(arr);
+// console.log(img1.id); 
+var obj=obj , arr=arr ;
+​img.addEventListener("click",change_icon);
+}
+//////////////////////////// add event listener 
+input.addEventListener("click",function(){  input.value=""; });
+input.addEventListener("input",change_input);
+icon_add.addEventListener("click" ,main);
+//////////////function main 
+function main (){
+if(  input.value !== ""){
 
 
-            document.getElementById("s0").addEventListener("click" ,function (){
-            document.getElementById("s0").innerHTML='<img src="ot.png" alt="kk"/>';
-            document.getElementById("span").style= "text-decoration-line :line-through ";
-                    });
+obj={
+id : i++ ,
+value :input.value,
+bool:false 
+}
+arr.push(obj);
+console.log(arr);
 
-            document.getElementById("sx").addEventListener("click" , function () {
-            arr.pop(input.value);
-            document.getElementById("init0").innerHTML=arr.length; 
-            document.getElementById("test").innerHTML="";
-                });
-                   
-             document.getElementById("au1").addEventListener("click" , function (){
-            document.getElementById("s0").innerHTML= '<img src="ot.png" alt="kk"/>' ;
-            document.getElementById("span").style = "text-decoration-line:line-through" ; 
-                });
+counter.innerHTML=arr.length ;
+counter.style="color:black";
+creat_li (obj,arr);
+console.log(obj);
+}
+else {
+console.log("This input is  empty");}
+};
+function click_icon_empty(){
+var img2= document.createElement("IMG");
+img2.src="icon 1 right.png";
+img2.alt="icon 1 right.png";
+img2.id="icon1right";
+// console.log(img2);
+// this.innerHTML=img2;
+document.getElementById("span").style= "text-decoration-line :line-through ";
+}
+function change_icon (obj , arr){
+    console.log(obj , arr);
+    console.log(obj.value);
+click_icon_empty();
+}
