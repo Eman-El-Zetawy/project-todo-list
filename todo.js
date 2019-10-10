@@ -2,8 +2,6 @@
 
         var input = document.getElementById("input");
         var div = document.getElementById("div");
-       var imgg1 = document.getElementById(" imgg1");
-       var imgg2 = document.getElementById(" imgg2");
        var counter = document.getElementById("counter");
         var inbox = document.getElementById("inbox");
         var icon_add = document.getElementById("icon-add");
@@ -104,9 +102,10 @@
         document.getElementById("text").innerHTML="";
        console.log(arr);
         document.getElementById("counter").innerHTML=arr.length ;
-        }
+        } 
+
        function click_complete_all(){
-    arr.forEach(object => {
+      arr.forEach(object => {
       document.getElementById("icon-empty").innerHTML='<img src="icon 1 right.png" alt="icon 1 right.png" id="icon1right" class="icon1right">'+'</img>';
       document.getElementById("span").style= "text-decoration-line :line-through ";
       object.bool=true;
